@@ -75,6 +75,10 @@
         .join("");
     }
 
+    // This function is implemented using a technique called Event Delegation. That means that
+    // the parent element is the one in charged to dispatch the event to one of its children.
+    // This technique is used because when adding elements (li) to the itemsList variable, there is
+    // no event listener attached to them.
     function toggleDone(e) {
       if (!e.target.matches('input')) return;
       const el = e.target;
